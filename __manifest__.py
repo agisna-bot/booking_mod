@@ -33,7 +33,8 @@
         'views/room_list.xml',
         'views/room_status.xml',
         'views/room_book.xml',
-        # 'views/room_hours.xml'
+        'views/room_hours.xml',
+        'views/book_hours.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

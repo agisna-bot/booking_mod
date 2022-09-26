@@ -7,11 +7,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="room_id"/>
-                    <field name="book_date" widget="date"/>
-                    <field name="book_start" widget="datetime"/>
-                    <field name="duration_id"/>
-                    <field name="book_end" widget="datetime"/>
+                    <!-- <field name="room_id"/> -->
+                    <!-- <field name="book_start" widget="datetime"/> -->
+                    <!-- <field name="book_end" widget="datetime"/> -->
                 </tree>
             </field>
         </record>
@@ -24,12 +22,22 @@
                     <sheet>
                         <group>
                             <field name="name"/>
-                            <field name="room_id"/>
-                            <field name="book_date" widget="date"/>
-                            <field name="book_start" widget="datetime"/>
-                            <field name="duration_id"/>
-                            <field name="book_end" widget="datetime"/>
+                            <!-- <field name="room_id"/> -->
+                            <!-- <field name="book_start" widget="datetime"/> -->
+                            <!-- <field name="book_end" widget="datetime"/> -->
                         </group>
+                        <notebook>
+                            <page name="book" string="Book">
+                                <field name="book_line_ids">
+                                    <tree editable="bottom" string="Book Line">
+                                        <field name="room_id"/>
+                                        <field name="book_date" widget="date"/>
+                                        <field name="hours_id"/>
+                                        <field name="duration_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

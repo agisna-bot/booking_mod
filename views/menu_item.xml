@@ -5,5 +5,7 @@
 
         <menuitem id="menu_bar_room" name="Ruangan" parent="menu_dashboard"/>
 
+        <menuitem id="menu_bar_config" name="Konfigurasi" parent="menu_dashboard" sequence="30"/>
+
     </data>
 </odoo>
