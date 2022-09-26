@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="room_book_view_tree" model="ir.ui.view">
+            <field name="name">room.book.tree</field>
+            <field name="model">room.book</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="room_id"/>
+                    <field name="book_date" widget="date"/>
+                    <field name="book_start" widget="datetime"/>
+                    <field name="duration_id"/>
+                    <field name="book_end" widget="datetime"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="room_book_view_form" model="ir.ui.view">
+            <field name="name">room.book.form</field>
+            <field name="model">room.book</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="room_id"/>
+                            <field name="book_date" widget="date"/>
+                            <field name="book_start" widget="datetime"/>
+                            <field name="duration_id"/>
+                            <field name="book_end" widget="datetime"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="room_book_action" model="ir.actions.act_window">
+            <field name="name">Pemesanan Ruangan</field>
+            <field name="res_model">room.book</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_item_room_book" name="Pesan Ruangan" parent="menu_bar_room" action="room_book_action"/>
+    </data>
+</odoo>

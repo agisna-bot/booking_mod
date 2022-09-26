@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="room_status_view_tree" model="ir.ui.view">
+            <field name="name">room.status.tree</field>
+            <field name="model">room.status</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="room_status_view_form" model="ir.ui.view">
+            <field name="name">room.status.form</field>
+            <field name="model">room.status</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="room_status_action" model="ir.actions.act_window">
+            <field name="name">Status Ruangan</field>
+            <field name="res_model">room.status</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_item_room_status" name="Status Ruangan" parent="menu_bar_room" action="room_status_action"/>
+    </data>
+</odoo>
